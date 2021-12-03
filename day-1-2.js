@@ -5,7 +5,7 @@ var threeInputs = input.map((data, dataIndex) => {
       return data + input[dataIndex + 1] + input[dataIndex + 2];
   }
       
-   return lastThree = null;
+   return null;
  }).filter((x) => x != null)
 console.info(threeInputs)
 
