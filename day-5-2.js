@@ -1,3 +1,13 @@
+/*--------------------------
+  Made at: 06-12-2021
+  Dificulty: 4/10
+  Time to solve: day-5-1 + ~30min
+  Solution explanation:
+      Same idea as day-5-1, but I add a else that will deal with diagonals.
+
+      The hardest part is debug and analyse the data.
+---------------------------*/
+
 var readings = [[[409,872],[409,963]],
 [[149,412],[281,280]],
 [[435,281],[435,362]],
@@ -499,20 +509,6 @@ var readings = [[[409,872],[409,963]],
 [[786,160],[333,613]],
 [[919,123],[88,954]]]
 
-/*
-var readings = [
-  [[0,9],[5,9]],
-  [[8,0],[0,8]],
-  [[9,4],[3,4]],
-  [[2,2],[2,1]],
-  [[7,0],[7,4]],
-  [[6,4],[2,0]],
-  [[0,9],[2,9]],
-  [[3,4],[1,4]],
-  [[0,0],[8,8]],
-  [[5,5],[8,2]],
-];
-*/
 
 function getMax(array, index){
   return array.reduce((c, r) => {

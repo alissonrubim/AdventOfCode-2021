@@ -1,3 +1,16 @@
+/*--------------------------
+  Made at: 06-12-2021
+  Dificulty: 14/10
+  Time to solve: ~45min
+  Solution explanation:
+      The ideia is for each input number, I'll process every board and mark that board with -1;
+      For example: for the number 14, I go to every board and then I change the board position at number 14, to -1.
+
+      At the end of the cycle, I will check if I have any board that has a row winner, if not, I'll check any row that has a col winner.
+      Then I use that board as a answer.
+---------------------------*/
+
+
 var numbers = [14,30,18,8,3,10,77,4,48,67,28,38,63,43,62,12,68,88,54,32,17,21,83,64,97,53,24,2,60,96,86,23,20,93,65,34,45,46,42,49,71,9,61,16,31,1,29,40,59,87,95,41,39,27,6,25,19,58,80,81,50,79,73,15,70,37,92,94,7,55,85,98,5,84,99,26,66,57,82,75,22,89,74,36,11,76,56,33,13,72,35,78,47,91,51,44,69,0,90,52];
 var boards = [[
   [13, 62, 38, 10, 41],
@@ -614,11 +627,13 @@ function getFirstWinnerBoad(boards, numbers){
             board[i][j] = -1
     })
 
+    //Get the row winner
     winner = boards.find((x) => x.find((row) => row.filter((n) => n < 0).length === 5))
 
     if(winner)
       return true
     else{   
+      //Get the col winner
       winner = boards.find((board) => {
         for(var i=0; i < 5; i++){
           var count = 0;

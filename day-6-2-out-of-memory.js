@@ -1,4 +1,18 @@
-//var inputs = [3,4,3,1,2]
+/*--------------------------
+ !!!!THIS IS NOT THE SOLUTION => LOOK FOR FILE day-6-2.js FOR THE SOLUTION
+
+  Made at: 06-12-2021
+  Dificulty: 5/10
+  Time trying to solve: ~3h 
+  Solution explanation:
+      The ideia is create an array with all the fishes (like day-6-1.js). Each position at the array is one fish and the number represents his age.
+      When the fish age reaches 0, I reset his age to 6 and push a new fish with age 8 at the end of the array.
+      At the end, I just need to count how many array position I have.
+      The problem is that the number grows so fast that breaks the maximum memory of javascript.
+
+      So I decide to create buckets. Each bucked will contain a maximum number of fishes. When a bucked get full, I just create a new bucked and add the remaining fishes.
+      The problem is that the buckets also grow super fast and breaks the memory of the javascript.
+---------------------------*/
 
 var inputs = [3,4,3,1,2]
 

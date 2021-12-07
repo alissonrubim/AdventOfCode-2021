@@ -1,3 +1,13 @@
+/*--------------------------
+  Made at: 06-12-2021
+  Dificulty: 4/10
+  Time to solve: ~30min
+  Solution explanation:
+      I just created a matrix and I filled up with 0;
+      Everytime that I have a pair of [from] and [to], I just move to the positions and do a increment in that position.
+      At the end, I cound how many position I have that contains more than 2.
+---------------------------*/
+
 var readings = [[[409,872],[409,963]],
 [[149,412],[281,280]],
 [[435,281],[435,362]],
