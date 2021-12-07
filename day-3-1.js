@@ -1,3 +1,10 @@
+/*--------------------------
+  Made at: 01-12-2021
+  Dificulty: 3/10
+  Time to solve: ~25min
+  Solution explanation:
+---------------------------*/
+
 const parseArray = arr => {
   const binaryString = arr.join("");
   return parseInt(binaryString, 2);
